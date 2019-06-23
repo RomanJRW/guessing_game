@@ -1,16 +1,13 @@
 version: 1
 update_configs:
-- package_manager: "rust:cargo" # REQUIRED
-  directory: "/" # REQUIRED
-  update_schedule: "live" # REQUIRED
+- package_manager: "rust:cargo"
+  directory: "/"
+  update_schedule: "live"
   target_branch: "master"
   default_reviewers:
   - "RomanJRW"
   default_labels:
   - "dependencies"
-#  allowed_updates:
-#  - match:
-#      update_type: "security"
-# ignored_updates:
-#  - match:
-#      dependency_name: "express"
+  allowed_updates:
+  - match:
+      update_type: "security"
